@@ -16,7 +16,7 @@ def generate_question():
     end = step * (int(random() * 5) + _PROGRESSION_LEN_MIN) + start
     # print('DBG: end', progression_end)
     progression = list(range(start, end, step))
-    x_index = int(random() * len(progression))
+    x_index = int(random() * (len(progression) - 1)) + 1
     # print('DBG: ', progression)
     # print('DBG: ', x_index)
     question = \
