@@ -18,23 +18,25 @@ def read_user_answer():
 
 
 def generate_question(game_name):
+    result = (None, None)
+
     if game_name == even.GAME_NAME:
-        return even.generate_question()
+        result = even.generate_question()
     elif game_name == calc.GAME_NAME:
-        return calc.generate_question()
+        result = calc.generate_question()
     elif game_name == gcd.GAME_NAME:
-        return gcd.generate_question()
+        result = gcd.generate_question()
     elif game_name == progression.GAME_NAME:
-        return progression.generate_question()
+        result = progression.generate_question()
     elif game_name == prime.GAME_NAME:
-        return prime.generate_question()
+        result = prime.generate_question()
     else:
         print('ERROR: unknown game name')
-        return ('no question', 'no answer')
+
+    return result
 
 
 def print_game_rules(game_name):
-
     if game_name == even.GAME_NAME:
         print(even.GAME_RULES)
     elif game_name == calc.GAME_NAME:
