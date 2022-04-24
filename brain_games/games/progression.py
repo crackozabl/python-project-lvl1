@@ -10,15 +10,11 @@ _PROGRESSION_LEN_MIN = 5
 
 def generate_question():
     start = int(random() * 100)
-    # print('DBG: start ', progression_start)
     step = int(random() * 10) + 1
-    # print('DBG: step', progression_step)
     end = step * (int(random() * 5) + _PROGRESSION_LEN_MIN) + start
-    # print('DBG: end', progression_end)
     progression = list(range(start, end, step))
     x_index = int(random() * (len(progression) - 1)) + 1
-    # print('DBG: ', progression)
-    # print('DBG: ', x_index)
+
     question = \
         " ".join(str(x) for x in progression[0:x_index]) + \
         " .. " + \
