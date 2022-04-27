@@ -9,6 +9,10 @@ _STEP_MAX = 10
 _PROGRESSION_LEN_MIN = 5
 
 
+def _array_to_string(array):
+    return " ".join(str(x) for x in array)
+
+
 def generate_question():
     start = int(random() * _NUMBER_MIN)
     step = int(random() * _STEP_MAX) + 1
@@ -16,10 +20,9 @@ def generate_question():
     progression = list(range(start, end, step))
     x_index = int(random() * (len(progression) - 1)) + 1
 
-    question = \
-        " ".join(str(x) for x in progression[0:x_index]) + \
-        " .. " + \
-        " ".join(str(x) for x in progression[x_index + 1:])
+    question_before_x = _array_to_string(progression[0:x_index])
+    question_after_x = _array_to_string(progression[(x_index + 1):])
+    question = question_before_x + " .. " + question_after_x
 
     answer = progression[x_index]
 

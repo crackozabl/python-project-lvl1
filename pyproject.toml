@@ -8,7 +8,7 @@ packages = [
     { include = "brain_games" }
 ]
 classifiers = [
-    "Topic :: Software Development :: Hexlet"
+    "Topic :: Software Development :: Hexlet",
     "Topic :: Games/Entertainment :: Puzzle Games"
 ]
 
