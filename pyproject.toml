@@ -2,9 +2,14 @@
 name = "hexlet-code"
 version = "0.1.1"
 description = "Start python project for review"
+repository = "https://github.com/crackozabl/python-project-lvl1.git"
 authors = ["Anton Olenev <a_olenev@mail.ru>"]
 packages = [
     { include = "brain_games" }
+]
+classifiers = [
+    "Topic :: Software Development :: Hexlet"
+    "Topic :: Games/Entertainment :: Puzzle Games"
 ]
 
 [tool.poetry.scripts]
