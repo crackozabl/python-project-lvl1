@@ -1,16 +1,16 @@
 import prompt
 
-MAX_MOVES = 3
+MOVE_MAX = 3
 
 
-def play(game, max_moves=MAX_MOVES):
+def play(game):
 
     user_name = prompt.string('May I have your name? ')
 
-    print(game.GAME_RULES)
+    print(game.GAME_DESCRIPTION)
 
-    for move in range(0, MAX_MOVES):
-        (question, answer) = game.generate_question()
+    for move in range(0, MOVE_MAX):
+        (question, answer) = game.generate_move_data()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
 

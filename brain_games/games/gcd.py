@@ -2,13 +2,12 @@ from math import gcd
 from random import random
 
 
-GAME_RULES = 'Find the greatest common divisor of given numbers.'
-GAME_NAME = 'gcd'
+GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 _NUMBER_MAX = 10
 _NUMBER_MIN = 1
 
 
-def generate_question():
+def generate_move_data():
     number_1 = int(random() * _NUMBER_MAX) + _NUMBER_MIN
     number_2 = int(random() * _NUMBER_MAX) + _NUMBER_MIN
 

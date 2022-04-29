@@ -1,8 +1,9 @@
 from random import random
 
 
-GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-GAME_NAME = 'prime'
+GAME_DESCRIPTION = \
+    'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 _NUMBER_MAX = 10
 _NUMBER_MIN = 1
 
@@ -22,7 +23,7 @@ def _is_prime(n):
     return True
 
 
-def generate_question():
+def generate_move_data():
     number = int(random() * _NUMBER_MAX) + _NUMBER_MIN
     answer = 'yes' if _is_prime(number) else 'no'
 

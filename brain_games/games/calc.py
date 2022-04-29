@@ -1,13 +1,13 @@
 from random import random
 
-GAME_RULES = 'What is the result of the expression?'
-GAME_NAME = 'calc'
+
+GAME_DESCRIPTION = 'What is the result of the expression?'
 _OPERATORS = ['*', '+', '-']
 _OPERAND_MAX = 3
 _OPERAND_MIN = 1
 
 
-def generate_question():
+def generate_move_data():
     operator = _OPERATORS[int(random() * len(_OPERATORS))]
     operand_1 = int(random() * _OPERAND_MAX) + _OPERAND_MIN
     operand_2 = int(random() * _OPERAND_MAX) + _OPERAND_MIN
